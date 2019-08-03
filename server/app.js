@@ -1,9 +1,8 @@
-const express = require('express')
+import express from "express";
+import routes from "./api"
 const app = express();
-
-const routes = require("./api");
 
 app.use(routes());
 app.listen(3001, () => {
-    console.log("SERVER RUNNNG")
+    console.log("SERVER RUNNNG ON PORT 3001")
 })

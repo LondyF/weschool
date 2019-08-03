@@ -1,9 +1,8 @@
-const express = require("express");
-const route = express.Router();
+import { Router } from "express";
+import UserService from "../../services/UserService"
+const route = Router();
 
-const UserService = require("../../services/UserService")
-
-module.exports = (app) => {
+export default (app) => {
     const UserServiceInstance = new UserService();
 
     app.use(route);
